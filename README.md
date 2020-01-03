@@ -9,6 +9,10 @@ In a few cases, used the fastq-dump tool to convert compressed files to fastq.
 Now need to deal with trimming, but don't know the adaptors. Will try to use fastQC and TrimGalore; installed fastQC, but now need to download TrimGalore script from GitHub.
 Installed TrimGalore using curl -fsSL https://github.com/FelixKrueger/TrimGalore/archive/0.6.5.tar.gz -o trim_galore.tar.gz
 then tar xvzf trim_galore.tar.gz
+
 Installed cutadapt using pip3 install --user --upgrade cutadapt
+
 Added '/Users/sachanelson/.local/bin' to the PATH
+
 Downloaded fastqc to /Users/sachanelson/Applications and added link: sudo ln -s ~/Applications/FastQC/fastqc /usr/local/bin/fastqc
+
