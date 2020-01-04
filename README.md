@@ -16,3 +16,10 @@ Added '/Users/sachanelson/.local/bin' to the PATH
 
 Downloaded fastqc to /Users/sachanelson/Applications and added link: sudo ln -s ~/Applications/FastQC/fastqc /usr/local/bin/fastqc
 
+FastQC shows what looks like might be adaptors in ~0-10 and ~50-60, but no repetitive sequences identified. I realized this may be because the fastq file has both paired reads in it instead of these being separated into different files. Found https://edwards.sdsu.edu/research/fastq-dump/ which describes using --split-files and -I options with fastq-dump to produce paired files from downloaded SRA data. 
+
+Somehow I have wound up with unzipped files--need to fix that.
+
+trim_galore found the Nextera transposase sequence and trimmed using that. But then failed validation: "Read 2 output is truncated at sequence count: 48281844, please check your paired-end input files! Terminating..."
+
+Used fasterq-dump (defaults to split 3, doesn't deal with gzip, but much faster when run on local solid state drive. gzip is taking a long time though.
